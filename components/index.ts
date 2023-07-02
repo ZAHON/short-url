@@ -1,6 +1,7 @@
 export * from './button';
 export * from './dialog';
 export * from './error-message';
+export * from './icon-button';
 export * from './label';
 export * from './loader';
 export * from './menu';
