@@ -47,6 +47,7 @@ module.exports = {
         'slide-right-and-fade': 'slide-right-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-down-and-fade': 'slide-down-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-left-and-fade': 'slide-left-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'skeleton-fade': 'skeleton-fade var(--skeleton-animation-duration) ease-in-out infinite',
       },
       keyframes: {
         'show-dialog-overlay': {
@@ -72,6 +73,10 @@ module.exports = {
         'slide-left-and-fade': {
           '0%': { opacity: 0, transform: 'translateX(0.125rem)' },
           '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'skeleton-fade': {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
         },
       },
     },
