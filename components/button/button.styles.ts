@@ -37,7 +37,7 @@ export const buttonStyles = cva(
       },
       variant: {
         default: [
-          'text-accent-5',
+          'text-accent-8',
           'bg-white',
           'border-accent-2',
 
@@ -46,6 +46,19 @@ export const buttonStyles = cva(
 
           'enabled:focus-visible:text-black',
           'enabled:focus-visible:border-black',
+        ],
+        tertiary: [
+          'text-accent-8',
+          'bg-accent-1',
+          'border-accent-1',
+
+          'enabled:hover:text-black',
+          'enabled:hover:bg-accent-2/80',
+          'enabled:hover:border-accent-2',
+
+          'enabled:active:text-black',
+          'enabled:active:bg-accent-2/80',
+          'enabled:active:border-accent-2',
         ],
         secondary: [
           'text-white',

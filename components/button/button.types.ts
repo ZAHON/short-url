@@ -24,7 +24,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
    * The variant of the button.
    * @default "secondary"
    */
-  variant?: 'default' | 'secondary' | 'success' | 'error' | 'warning';
+  variant?: 'default' | 'tertiary' | 'secondary' | 'success' | 'error' | 'warning';
 
   /**
    * If `true`, the button will have 100% width of his parent.

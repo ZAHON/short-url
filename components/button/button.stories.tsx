@@ -61,6 +61,12 @@ export const DefaultVariant: Story = {
   },
 };
 
+export const TertiaryVariant: Story = {
+  args: {
+    variant: 'tertiary',
+  },
+};
+
 export const SecondaryVariant: Story = {
   args: {
     variant: 'secondary',
