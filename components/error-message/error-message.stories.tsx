@@ -25,3 +25,21 @@ export const WithoutIcon: Story = {
     withIcon: false,
   },
 };
+
+export const SmallFontSize: Story = {
+  args: {
+    fontSize: 'sm',
+  },
+};
+
+export const MediumFontSize: Story = {
+  args: {
+    fontSize: 'md',
+  },
+};
+
+export const LargeFontSize: Story = {
+  args: {
+    fontSize: 'lg',
+  },
+};
