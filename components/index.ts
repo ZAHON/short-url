@@ -6,4 +6,5 @@ export * from './loader';
 export * from './menu';
 export * from './password-input';
 export * from './separator';
+export * from './switch';
 export * from './text-input';
