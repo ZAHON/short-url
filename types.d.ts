@@ -1,13 +1,11 @@
 import type { DefaultSession } from 'next-auth';
 import { PrismaClient } from '@prisma/client';
 
-interface User extends DefaultSession['user'] {
-  id: string;
-}
-
 declare module 'next-auth' {
   interface Session {
-    user?: User;
+    user?: {
+      id: string;
+    } & DefaultSession['user'];
   }
 }
 
