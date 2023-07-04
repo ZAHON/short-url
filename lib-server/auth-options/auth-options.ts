@@ -1,10 +1,9 @@
+import 'server-only';
 import type { NextAuthOptions } from 'next-auth';
 import type { Adapter } from 'next-auth/adapters';
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
-// import { prisma } from '@/lib-server';
-
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
