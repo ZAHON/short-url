@@ -14,7 +14,10 @@ export function Logo() {
   }
 
   return (
-    <Link href="/">
+    <Link
+      href="/"
+      className="rounded-full focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-success"
+    >
       <Skeleton visible={!loading} fitContent className="rounded-full">
         <Image
           height={40}

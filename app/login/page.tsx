@@ -11,7 +11,7 @@ export default async function LoginPage() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center">
-      <section className="flex max-h-[90vh] w-[90vw] max-w-md flex-col rounded-lg border border-accent-2 bg-white shadow-md">
+      <section className="flex max-h-[90vh] w-[90vw] max-w-md flex-col overflow-hidden rounded-lg border border-accent-2 bg-white shadow-md">
         <Header />
         <ContinueWith />
       </section>
