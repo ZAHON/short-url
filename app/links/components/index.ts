@@ -1,4 +1,5 @@
 export * from './create-link-button';
+export * from './create-link-dialog';
 export * from './header';
 export * from './main';
 export * from './sub-hader';
