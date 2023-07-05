@@ -1,7 +1,7 @@
 import 'server-only';
 import { PrismaClient } from '@prisma/client';
 
-export let prisma: PrismaClient;
+let prisma: PrismaClient;
 
 if (typeof window === 'undefined') {
   if (process.env.NODE_ENV === 'production') {
@@ -14,3 +14,7 @@ if (typeof window === 'undefined') {
     prisma = global.prisma;
   }
 }
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export default prisma;
