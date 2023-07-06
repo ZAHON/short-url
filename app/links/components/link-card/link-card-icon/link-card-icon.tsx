@@ -1,15 +1,25 @@
 'use client';
-import type { LinkIconProps } from './link-icon.types';
+import type { LinkCardIconProps } from './link-card-icon.types';
 import { useState } from 'react';
 import Image from 'next/image';
-import { IconWorldWww } from '@tabler/icons-react';
+import { IconWorldWww, IconArchive } from '@tabler/icons-react';
 import { Skeleton } from '@/components';
 
-export function LinkIcon(props: LinkIconProps) {
-  const { url } = props;
+export function LinkCardIcon(props: LinkCardIconProps) {
+  const { url, archived } = props;
 
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  if (archived) {
+    return (
+      <IconArchive
+        aria-hidden="true"
+        focusable="false"
+        className="h-9 w-9 select-none text-accent-6"
+      />
+    );
+  }
 
   const { hostname } = new URL(url);
 
