@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: '*.googleusercontent.com',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.google.com',
+        pathname: '**',
+      },
     ],
   },
   experimental: {
