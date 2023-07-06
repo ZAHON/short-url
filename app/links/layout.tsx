@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Header, SubHeader, Main, CreateLinkDialog } from './components';
+import { Header, SubHeader, Main, CreateLinkDialog, ArchiveLinkDialog } from './components';
 
 export default function LinksPageLayout(props: { children: ReactNode }) {
   const { children } = props;
@@ -11,6 +11,7 @@ export default function LinksPageLayout(props: { children: ReactNode }) {
       <Main>{children}</Main>
 
       <CreateLinkDialog />
+      <ArchiveLinkDialog />
     </>
   );
 }

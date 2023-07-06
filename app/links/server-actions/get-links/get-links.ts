@@ -8,6 +8,7 @@ export async function getLinks(args: GetLinksArgs) {
   const links = await prisma.link.findMany({
     where: { userId },
     select: {
+      archived: true,
       id: true,
       slug: true,
       url: true,

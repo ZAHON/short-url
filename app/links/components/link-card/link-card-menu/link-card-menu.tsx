@@ -9,7 +9,7 @@ import { LinkCardMenuArchive } from './link-card-menu-archive';
 import { LinkCardMenuDelete } from './link-card-menu-delete';
 
 export function LinkCardMenu(props: LinkCardMenuProps) {
-  const { slug } = props;
+  const { id, url, slug, archived } = props;
 
   const [open, setOpen] = useState(false);
 
@@ -24,7 +24,7 @@ export function LinkCardMenu(props: LinkCardMenuProps) {
           </MenuGroup>
           <MenuSeparator />
           <MenuGroup>
-            <LinkCardMenuArchive />
+            <LinkCardMenuArchive id={id} url={url} slug={slug} archived={archived} />
             <LinkCardMenuDelete />
           </MenuGroup>
         </MenuContent>

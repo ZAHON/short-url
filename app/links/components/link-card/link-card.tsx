@@ -5,7 +5,7 @@ import { LinkCardTitle } from './link-card-title';
 import { LinkCardMenu } from './link-card-menu';
 
 export function LinkCard(props: LinkCardProps) {
-  const { url, slug, clicks, createdAt } = props;
+  const { id, url, slug, archived, clicks, createdAt } = props;
 
   const addedText = `Added ${formatDate(createdAt)}`;
   const clicksText = `${clicks} clicks`;
@@ -25,7 +25,7 @@ export function LinkCard(props: LinkCardProps) {
           </div>
         </div>
       </div>
-      <LinkCardMenu slug={slug} />
+      <LinkCardMenu id={id} url={url} slug={slug} archived={archived} />
     </li>
   );
 }

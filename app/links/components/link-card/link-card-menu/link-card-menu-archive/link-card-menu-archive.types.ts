@@ -1,4 +1,4 @@
-export interface LinkCardMenuProps {
+export interface LinkCardMenuArchiveProps {
   id: string;
   url: string;
   slug: string;
