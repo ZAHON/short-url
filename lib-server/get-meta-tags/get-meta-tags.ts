@@ -11,9 +11,11 @@ export async function getMetaTags(url: string) {
 
     const html = await getHtml(url);
 
+    const { hostname, pathname } = new URL(url);
+
     if (!html) {
       return {
-        title: url,
+        title: `${hostname}${pathname}`,
         description: 'No description',
         image: null,
       };
@@ -40,7 +42,7 @@ export async function getMetaTags(url: string) {
     const image = imageOg || imageTwitter;
 
     return {
-      title: title || url,
+      title: title || `${hostname}${pathname}`,
       description: truncate({ str: description || 'No description', length: 280 }),
       image: getRelativeUrl({ url: url, imageUrl: image }),
     };
