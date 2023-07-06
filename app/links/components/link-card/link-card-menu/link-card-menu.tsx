@@ -4,7 +4,6 @@ import { Menu, MenuPortal, MenuContent, MenuGroup, MenuSeparator } from '@/compo
 import { LinkCardMenuTrigger } from './link-card-menu-trigger';
 import { LinkCardMenuCopyToClipboard } from './link-card-menu-copy-to-clipboard';
 import { LinkCardMenuDownloadQrCode } from './link-card-menu-download-qr-code';
-import { LinkCardMenuDuplicate } from './link-card-menu-duplicate';
 import { LinkCardMenuArchive } from './link-card-menu-archive';
 import { LinkCardMenuDelete } from './link-card-menu-delete';
 
@@ -22,7 +21,6 @@ export function LinkCardMenu() {
           </MenuGroup>
           <MenuSeparator />
           <MenuGroup>
-            <LinkCardMenuDuplicate />
             <LinkCardMenuArchive />
             <LinkCardMenuDelete />
           </MenuGroup>
