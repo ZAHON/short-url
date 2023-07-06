@@ -3,6 +3,7 @@ export * from './create-link-dialog';
 export * from './header';
 export * from './link-card';
 export * from './link-cards-wrapper';
+export * from './link-icon';
 export * from './main';
 export * from './sub-hader';
 export * from './user-menu';

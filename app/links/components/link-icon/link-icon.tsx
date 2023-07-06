@@ -1,11 +1,11 @@
 'use client';
-import type { LinkCardFaviconProps } from './link-card-favicon.types';
+import type { LinkIconProps } from './link-icon.types';
 import { useState } from 'react';
 import Image from 'next/image';
 import { IconWorldWww } from '@tabler/icons-react';
 import { Skeleton } from '@/components';
 
-export function LinkCardFavicon(props: LinkCardFaviconProps) {
+export function LinkIcon(props: LinkIconProps) {
   const { url } = props;
 
   const [error, setError] = useState(false);
