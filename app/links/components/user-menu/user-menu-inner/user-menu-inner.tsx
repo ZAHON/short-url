@@ -1,7 +1,7 @@
 'use client';
 import type { UserMenuInnerProps } from './user-menu-inner.types';
 import { useState } from 'react';
-import { Menu, MenuGroup } from '@/components';
+import { Menu, MenuPortal, MenuGroup } from '@/components';
 import { UserMenuInnerTrigger } from './user-menu-inner-trigger';
 import { UserMenuInnerContent } from './user-menu-inner-content';
 import { UserMenuInnerInfo } from './user-menu-inner-info';
@@ -16,13 +16,15 @@ export function UserMenuInner(props: UserMenuInnerProps) {
   return (
     <Menu open={open} onOpenChange={setOpen}>
       <UserMenuInnerTrigger open={open} image={image} />
-      <UserMenuInnerContent>
-        <UserMenuInnerInfo name={name} email={email} />
-        <MenuGroup>
-          <UserMenuInnerMyLinks />
-          <UserMenuInnerLogout />
-        </MenuGroup>
-      </UserMenuInnerContent>
+      <MenuPortal>
+        <UserMenuInnerContent>
+          <UserMenuInnerInfo name={name} email={email} />
+          <MenuGroup>
+            <UserMenuInnerMyLinks />
+            <UserMenuInnerLogout />
+          </MenuGroup>
+        </UserMenuInnerContent>
+      </MenuPortal>
     </Menu>
   );
 }
