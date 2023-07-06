@@ -4,6 +4,7 @@ export * from './error-message';
 export * from './icon-button';
 export * from './label';
 export * from './loader';
+export * from './logo';
 export * from './menu';
 export * from './password-input';
 export * from './separator';
