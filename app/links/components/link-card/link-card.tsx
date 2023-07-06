@@ -25,7 +25,7 @@ export function LinkCard(props: LinkCardProps) {
           </div>
         </div>
       </div>
-      <LinkCardMenu />
+      <LinkCardMenu slug={slug} />
     </li>
   );
 }

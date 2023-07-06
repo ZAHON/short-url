@@ -1,4 +1,5 @@
 'use client';
+import type { LinkCardMenuProps } from './link-card-menu.types';
 import { useState } from 'react';
 import { Menu, MenuPortal, MenuContent, MenuGroup, MenuSeparator } from '@/components';
 import { LinkCardMenuTrigger } from './link-card-menu-trigger';
@@ -7,7 +8,9 @@ import { LinkCardMenuDownloadQrCode } from './link-card-menu-download-qr-code';
 import { LinkCardMenuArchive } from './link-card-menu-archive';
 import { LinkCardMenuDelete } from './link-card-menu-delete';
 
-export function LinkCardMenu() {
+export function LinkCardMenu(props: LinkCardMenuProps) {
+  const { slug } = props;
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,7 +19,7 @@ export function LinkCardMenu() {
       <MenuPortal>
         <MenuContent align="end">
           <MenuGroup>
-            <LinkCardMenuCopyToClipboard />
+            <LinkCardMenuCopyToClipboard slug={slug} />
             <LinkCardMenuDownloadQrCode />
           </MenuGroup>
           <MenuSeparator />
