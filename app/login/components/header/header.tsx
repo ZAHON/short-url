@@ -1,4 +1,4 @@
-import { Logo } from '..';
+import { Logo } from '@/components';
 
 export function Header() {
   return (
