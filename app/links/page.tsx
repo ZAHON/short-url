@@ -1,3 +1,4 @@
+import type { LinksPageProps } from './page.types';
 import { redirect } from 'next/navigation';
 import { getServerSession } from '@/lib-server';
 import { getLinks } from './server-actions';
@@ -6,7 +7,11 @@ import { Filters, LinkCardsWrapper, LinkCard } from './components';
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
 
-export default async function LinksPage() {
+export default async function LinksPage(props: LinksPageProps) {
+  const { searchParams } = props;
+
+  const search = searchParams?.search;
+
   const session = await getServerSession();
   const userId = session?.user?.id;
 
@@ -14,7 +19,7 @@ export default async function LinksPage() {
     redirect('/login');
   }
 
-  const links = await getLinks({ userId });
+  const links = await getLinks({ userId, search });
 
   return (
     <>

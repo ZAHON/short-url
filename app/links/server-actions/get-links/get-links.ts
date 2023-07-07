@@ -3,10 +3,13 @@ import { GetLinksArgs } from './get-links.types';
 import prisma from '@/lib-server/prisma';
 
 export async function getLinks(args: GetLinksArgs) {
-  const { userId } = args;
+  const { userId, search } = args;
 
   const links = await prisma.link.findMany({
-    where: { userId },
+    where: {
+      userId,
+      url: { contains: search, mode: 'insensitive' },
+    },
     select: {
       archived: true,
       id: true,
