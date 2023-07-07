@@ -3,7 +3,9 @@ import { GetLinksArgs } from './get-links.types';
 import prisma from '@/lib-server/prisma';
 
 export async function getLinks(args: GetLinksArgs) {
-  const { userId, search, showArchived } = args;
+  const { userId, search, sortByClicks, showArchived } = args;
+
+  // const orderBy =
 
   const links = await prisma.link.findMany({
     where: {
@@ -19,6 +21,7 @@ export async function getLinks(args: GetLinksArgs) {
       clicks: true,
       createdAt: true,
     },
+    orderBy: sortByClicks ? { clicks: 'desc' } : { createdAt: 'desc' },
   });
 
   return links;
