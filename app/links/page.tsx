@@ -11,6 +11,7 @@ export default async function LinksPage(props: LinksPageProps) {
   const { searchParams } = props;
 
   const search = searchParams?.search;
+  const showArchived = searchParams?.showArchived === 'true';
 
   const session = await getServerSession();
   const userId = session?.user?.id;
@@ -19,7 +20,7 @@ export default async function LinksPage(props: LinksPageProps) {
     redirect('/login');
   }
 
-  const links = await getLinks({ userId, search });
+  const links = await getLinks({ userId, search, showArchived });
 
   return (
     <>
