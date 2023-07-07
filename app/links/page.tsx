@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from '@/lib-server';
 import { getLinks } from './server-actions';
-import { LinkCardsWrapper, LinkCard } from './components';
+import { Filters, LinkCardsWrapper, LinkCard } from './components';
 
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
@@ -17,10 +17,13 @@ export default async function LinksPage() {
   const links = await getLinks({ userId });
 
   return (
-    <LinkCardsWrapper>
-      {links.map((link) => (
-        <LinkCard key={link.id} {...link} />
-      ))}
-    </LinkCardsWrapper>
+    <>
+      <Filters />
+      <LinkCardsWrapper>
+        {links.map((link) => (
+          <LinkCard key={link.id} {...link} />
+        ))}
+      </LinkCardsWrapper>
+    </>
   );
 }
