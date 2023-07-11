@@ -7,5 +7,6 @@ export * from './header';
 export * from './link-card';
 export * from './link-cards-wrapper';
 export * from './main';
+export * from './qr-code-link-dialog';
 export * from './sub-hader';
 export * from './user-menu';

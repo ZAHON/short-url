@@ -6,4 +6,5 @@ export const useLinksPageStore = create<LinksPageState>()((...a) => ({
   ...slices.createArchiveLinkSlice(...a),
   ...slices.createCreateLinkSlice(...a),
   ...slices.createDeleteLinkSlice(...a),
+  ...slices.createQrCodeLinkSlice(...a),
 }));

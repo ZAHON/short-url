@@ -20,7 +20,7 @@ export function LinkCardMenu(props: LinkCardMenuProps) {
         <MenuContent align="end">
           <MenuGroup>
             <LinkCardMenuCopyToClipboard slug={slug} />
-            <LinkCardMenuDownloadQrCode />
+            <LinkCardMenuDownloadQrCode url={url} slug={slug} />
           </MenuGroup>
           <MenuSeparator />
           <MenuGroup>

@@ -6,6 +6,7 @@ import {
   CreateLinkDialog,
   ArchiveLinkDialog,
   DeleteLinkDialog,
+  QrCodeLinkDialog,
 } from './components';
 
 export default function LinksPageLayout(props: { children: ReactNode }) {
@@ -20,6 +21,7 @@ export default function LinksPageLayout(props: { children: ReactNode }) {
       <CreateLinkDialog />
       <ArchiveLinkDialog />
       <DeleteLinkDialog />
+      <QrCodeLinkDialog />
     </>
   );
 }
