@@ -1,5 +1,12 @@
 import type { ReactNode } from 'react';
-import { Header, SubHeader, Main, CreateLinkDialog, ArchiveLinkDialog } from './components';
+import {
+  Header,
+  SubHeader,
+  Main,
+  CreateLinkDialog,
+  ArchiveLinkDialog,
+  DeleteLinkDialog,
+} from './components';
 
 export default function LinksPageLayout(props: { children: ReactNode }) {
   const { children } = props;
@@ -12,6 +19,7 @@ export default function LinksPageLayout(props: { children: ReactNode }) {
 
       <CreateLinkDialog />
       <ArchiveLinkDialog />
+      <DeleteLinkDialog />
     </>
   );
 }

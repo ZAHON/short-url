@@ -25,7 +25,7 @@ export function LinkCardMenu(props: LinkCardMenuProps) {
           <MenuSeparator />
           <MenuGroup>
             <LinkCardMenuArchive id={id} url={url} slug={slug} archived={archived} />
-            <LinkCardMenuDelete />
+            <LinkCardMenuDelete id={id} url={url} slug={slug} />
           </MenuGroup>
         </MenuContent>
       </MenuPortal>

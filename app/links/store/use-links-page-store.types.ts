@@ -1,3 +1,3 @@
-import type { ArchiveLinkSlice, CreateLinkSlice } from './slices';
+import type { ArchiveLinkSlice, CreateLinkSlice, DeleteLinkSlice } from './slices';
 
-export type LinksPageState = ArchiveLinkSlice & CreateLinkSlice;
+export type LinksPageState = ArchiveLinkSlice & CreateLinkSlice & DeleteLinkSlice;
