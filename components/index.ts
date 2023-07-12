@@ -3,6 +3,7 @@ export * from './dialog';
 export * from './error-message';
 export * from './icon-button';
 export * from './label';
+export * from './link-as-button';
 export * from './loader';
 export * from './logo';
 export * from './menu';
