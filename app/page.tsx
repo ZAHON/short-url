@@ -1,3 +1,14 @@
+import { Header, Main, HeroSection, FeaturesSection, Footer } from './components';
+
 export default function HomePage() {
-  return <h1>Home page</h1>;
+  return (
+    <>
+      <Header />
+      <Main>
+        <HeroSection />
+        <FeaturesSection />
+      </Main>
+      <Footer />
+    </>
+  );
 }
